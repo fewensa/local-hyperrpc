@@ -96,7 +96,7 @@ impl RpcHandler {
                 handlers::eth_get_transaction_by_block_number_and_index::handle(self, reqs).await
             }
             "eth_getBlockReceipts" => handlers::eth_get_block_receipts::handle(self, reqs).await,
-            "eth_getLogs" => handlers::eth_get_logs::handle(self, reqs).await,
+            // "eth_getLogs" => handlers::eth_get_logs::handle(self, reqs).await,
             "eth_blockNumber" => handlers::eth_block_number::handle(self, reqs).await,
             "eth_chainId" => handlers::eth_chain_id::handle(self, reqs),
             _ => handlers::handle_method_not_found(&self.rpc_client, reqs).await,
