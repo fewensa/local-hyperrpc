@@ -91,7 +91,7 @@ impl RpcHandler {
             | "eth_getTransactionReceipt" => {
                 handlers::handle_method_not_found(&self.hyperrpc_client, reqs).await
             }
-            "eth_getBlockByNumber" => handlers::eth_get_block_by_number::handle(self, reqs).await,
+            // "eth_getBlockByNumber" => handlers::eth_get_block_by_number::handle(self, reqs).await,
             "eth_getTransactionByBlockNumberAndIndex" => {
                 handlers::eth_get_transaction_by_block_number_and_index::handle(self, reqs).await
             }
